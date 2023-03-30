@@ -1,0 +1,11 @@
+@use "../../../public/utils/colors" as c;
+
+.layout {
+    color: c.$main-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: 100vh;
+    width: 100vw;
+}

@@ -1,17 +1,15 @@
-$main-color: #083D77;
-$sub-color: #ffffff;
-$alter-color: #588b8b;
+@use "../../../public/utils/colors" as c;
 .main {
     height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: $sub-color;
+    background-color: c.$sub-color;
     
 
 
     .container {
-        color: $main-color;
+        color: c.$main-color;
         //background-color: lightcoral;
         padding: 0% 5% 5% 7%;
         display: flex;
@@ -67,23 +65,24 @@ $alter-color: #588b8b;
                 font-size: 4vh;
                 padding: 1%;
                 margin-right: 1vw;
-                background-color: $main-color;
-                color: $sub-color;
+                background-color: c.$main-color;
+                color: c.$sub-color;
                 border-style: solid;
-                border: $main-color;
+                border: c.$main-color;
+                border-radius: 5%;
 
 
                 &:hover {
-                    background-color: $alter-color;
+                    background-color: c.$alter-color;
                     cursor: pointer;
                 }
             }
 
             .login {
-                color: $main-color;
+                color: c.$main-color;
 
                 &:hover {
-                    color: $alter-color;
+                    color: c.$alter-color;
                 }
             }
 

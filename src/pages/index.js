@@ -1,4 +1,4 @@
-import styles from "../styles/Index.module.scss";
+import styles from "../styles/pages/Index.module.scss";
 
 import Image from "next/image";
 import logo from "../../public/images/logo-nofondo.png";
@@ -6,24 +6,25 @@ import logo_icon from "../../public/logo.ico";
 
 import Link from "next/link";
 
+import TesteandoLogo from "../components/logo";
+
 // Google Font//
 // import {Noto_Sans_Zanabazar_Square} from '@next/font/google'
 // const noto = Noto_Sans_Zanabazar_Square({weight: '400', subsets:['latin']})
 
-import { Noto_Sans } from "@next/font/google";
-const notosans = Noto_Sans({
-  weight: ["100", "200", "300", "400", "800"],
-  subsets: ["latin"],
-});
-
 export default function Index() {
   return (
     <div className={styles.main}>
-      <section className={[styles.container, notosans.className].join(" ")}>
-        <h1 className={styles.h1}>
+      <section className={styles.container}>
+        {/* <h1 className={styles.h1}>
           <Image className={styles.logo} src={logo} alt={"Logo of CauraBank"} />
           CAURABANK
-        </h1>
+        </h1> */}
+
+        <TesteandoLogo />
+
+
+
         <h2 className={styles.h2}>
           Deposit, withdraw & transfer.<br></br> The only bank that works FOR you.
         </h2>

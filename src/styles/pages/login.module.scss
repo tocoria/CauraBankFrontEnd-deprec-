@@ -1,0 +1,20 @@
+@use "../../../public/utils/colors" as c;
+@use "../../../public/utils/variables" as v;
+
+
+
+.form{
+    padding-top: 10%;
+}
+
+.button {
+    margin-top: 30% !important;
+}
+
+.register {
+    color: c.$main-color;
+
+    &:hover {
+        color: c.$alter-color;
+    }
+}
