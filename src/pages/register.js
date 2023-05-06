@@ -1,57 +1,66 @@
+import styles from "../styles/pages/register.module.scss";
 
-import styles from "../styles/pages/register.module.scss"
 
-import Layout from "@/components/register-login-layout";
-import Container from "@/components/register-login-container.js"
-
-import Link from "next/link"
+import {Button, Form, Container, Row, Col} from 'react-bootstrap'
 
 export default function Register() {
+  return (
+    <main className={styles.main}>
+      <Container fluid="md" className={styles.registerContainer}>
 
-  const sendToConsole = () => {
-    console.log("test");
-  }
-    return (
-        <Layout>
+        <Row>
+          
+          <Col className={`mt-3`}>
 
-            
-          <Container>
+            <Form>
 
-                <form className={styles.form}>
+              <Form.Group className="m-3" controlId="formBasicName">
+                <Container>
 
-                  {/* <label htmlFor="name">Name</label>
-                  <input type="text" placeholder="Name" name="name"></input>
+                <Row>
 
+                  <Col className="ps-0">
+                <Form.Label className="text-white">Name</Form.Label>
+                <Form.Control type="text" placeholder=" Enter Name" />
+                </Col>
 
-                  <label htmlFor="username">Username</label>
-                  <input type="text" placeholder="Username" name="username"></input>
+                <Col className="pe-0">
+                <Form.Label className="text-white">Last Name</Form.Label>
+                <Form.Control type="text" placeholder="Enter Last name" />
+                </Col>
 
-                  <label htmlFor="password">Password</label>
-                  <input type="password" placeholder="Password" name="password"></input>
+                </Row>
+                </Container>
+              </Form.Group>
 
-                  <label htmlFor="email">Email</label>
-                  <input type="email" placeholder="Email" name="email"></input>
+              <Form.Group className="m-3" controlId="formBasicUserName">
+                <Form.Label className="text-white">Username</Form.Label>
+                <Form.Control type="text" placeholder="Enter Username" />
+              </Form.Group>
 
-                  <button type="submit" htmlFor="register">Register</button> */}
+              <Form.Group className="m-3" controlId="formBasicPassword">
+                <Form.Label className="text-white">Password</Form.Label>
+                <Form.Control type="password" placeholder="Enter password" />
+              </Form.Group>
 
+              <Form.Group className="m-3" controlId="formBasicEmail">
+                <Form.Label className="text-white">Email address</Form.Label>
+                <Form.Control type="email" placeholder="Enter email" />
+              </Form.Group>
 
-                  <input type="text" placeholder="Name" name="name"></input>
+              <div className="d-grid my-5 mx-3">
+                <Button className="text-white fw-bold" variant="secondary" type="submit">
+                Register
+                </Button>
+              </div>
 
+            </Form>
 
-                  <input type="text" placeholder="Username" name="username"></input>
+          </Col>
 
-                  <input type="password" placeholder="Password" name="password"></input>
+        </Row>
 
-                  <input type="email" placeholder="Email" name="email"></input>
-
-                  <button type="submit" htmlFor="register">Register</button>
-
-                  <p>Already have an account? <Link href="/login" className={styles.login}><span>Log in</span></Link></p>                
-                  </form>
-
-          </Container>
-
-
-        </Layout>
-    );
+      </Container>
+    </main>
+  );
 }

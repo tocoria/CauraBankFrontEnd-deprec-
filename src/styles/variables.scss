@@ -1,0 +1,27 @@
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem,
+  6: 5rem,
+  7: 10rem,
+);
+
+$theme-colors: (
+    "primary":    #1AEFCF,
+    "secondary":  #411aef,
+    "success":    #28a745,
+    "info":       #17a2b8,
+    "warning":    #ffc107,
+    "danger":     #dc3545,
+    "light":      #f8f9fa,
+    "dark":       #343a40,
+    "white":      #fff,
+    "transparent": rgba($color: #000000, $alpha: 0)
+);
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'
+

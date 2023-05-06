@@ -1,48 +1,61 @@
-import styles from "../styles/pages/Index.module.scss";
+import styles from "../styles/pages/index.module.scss";
 
-import Image from "next/image";
-import logo from "../../public/images/logo-nofondo.png";
-import logo_icon from "../../public/logo.ico";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 import Link from "next/link";
 
-import TesteandoLogo from "../components/logo";
-
-// Google Font//
-// import {Noto_Sans_Zanabazar_Square} from '@next/font/google'
-// const noto = Noto_Sans_Zanabazar_Square({weight: '400', subsets:['latin']})
-
 export default function Index() {
   return (
-    <div className={styles.main}>
-      <section className={styles.container}>
-        {/* <h1 className={styles.h1}>
-          <Image className={styles.logo} src={logo} alt={"Logo of CauraBank"} />
-          CAURABANK
-        </h1> */}
+    <main className={styles.main}>
+      <Container>
+        <Row className="justify-content-center">
+          <Col className={`text-center col-12 mt-5 ${styles.h2Container}`}>
+            <h2
+              className={`my-5 text-white display-1 fw-bold ${styles.slogan}`}
+            >
+              Deposit, withdraw & transfer. The only bank that works FOR you.
+            </h2>
+            <h3 className={`text-white fw-light mb-5 ${styles.phrase}`}>
+              Get a membership and start using our services. Operate using our
+              platform and earn points you can use on our premium online store.{" "}
+            </h3>
+          </Col>
+        </Row>
 
-        <TesteandoLogo />
+        <Row
+          className={`d-flex justify-content-center h-100 mt-5 ${styles.btnContainer}`}
+        >
+          <Col className="col-3 align-self-center text-center" xs={12} lg={4}>
+            <Link className={styles.registerLink} href="/register">
+              <div className="d-grid">
+                <Button
+                  className="m-4 text-secondary fw-bold"
+                  variant="white"
+                  size="lg"
+                >
+                  Get Started
+                </Button>
+              </div>
+            </Link>
+          </Col>
 
+          <Col className="col-3 align-self-center text-center" xs={12} lg={4}>
 
+            <Link className={styles.loginLink} href="/login">
 
-        <h2 className={styles.h2}>
-          Deposit, withdraw & transfer.<br></br> The only bank that works FOR you.
-        </h2>
-        <h3 className={styles.h3}>
-          Get a membership and start using our services. Operations using our
-          platform give you points you can exchange for gifts on our premium online store.
-        </h3>
-        <h3 className={styles.start}>
-          <Link href={"/register"}>
-          <button className={styles.button}>Get Started </button>
-          </Link>
-          
-          or <Link href={"/login"} className={styles.login}> <span>Log in</span> </Link>
-        </h3>
-      </section>
-      <section className={styles.imageContainer}>
+              <div className={`d-grid`}>
+                <Button className={`m-4 fw-bold ${styles.loginButton}`} variant="outline-white" size="lg">
 
-      </section>
-    </div>
+                  Login
+
+                </Button>
+              </div>
+
+            </Link>
+
+          </Col>
+        </Row>
+      </Container>
+    </main>
   );
 }

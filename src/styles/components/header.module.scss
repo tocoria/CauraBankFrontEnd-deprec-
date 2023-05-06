@@ -1,0 +1,18 @@
+.container {
+    background: rgb(26,239,207);
+    background: linear-gradient(270deg, rgba(26,239,207,1) 0%, rgba(25,128,239,1) 0%, rgba(65,26,239,1) 100%);
+}
+
+.logo {
+    width: 9%;
+    height: 9%;
+}
+
+.logoLink {
+    text-decoration: none;
+    color: #fff;
+
+    &:hover {
+        color: #1AEFCF;
+    }
+}

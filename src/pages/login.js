@@ -1,34 +1,52 @@
-import Layout from "../components/register-login-layout";
 
-import Container from "@/components/register-login-container";
-
-import styles from "../styles/pages/login.module.scss"
+import styles from "../styles/pages/login.module.scss";
+import {Button, Form, Container, Row, Col} from 'react-bootstrap'
 
 import Link from "next/link"
 
 export default function Login() {
-    return (
-        <Layout>
-
-            
-          <Container>
-
-                <form className={styles.form}>
+      
+   return (
 
 
-                <input type="text" placeholder="Username" name="username"></input>
+<main className={styles.main}>
+      <Container fluid="md">
 
-                <input type="password" placeholder="Password" name="password"></input>
+        <Row className={styles.loginContainer}>
+          
+          <Col lg={7}>
 
-                <button className={styles.button}>Log in</button>
+            <Form> 
 
-                <p>You don&apos;t have an account? <Link href="/register" className={styles.register}>Sign in.</Link></p>
+              <Form.Group className="my-5 mx-3" controlId="formBasicUserName">
+                <Form.Label className="text-white">Username</Form.Label>
+                <Form.Control type="text" placeholder="Enter Username" />
+              </Form.Group>
 
-                </form>
+              <Form.Group className="my-5 mx-3" controlId="formBasicPassword">
+                <Form.Label className="text-white">Password</Form.Label>
+                <Form.Control type="password" placeholder="Enter password" />
+              </Form.Group>
 
-          </Container>
+              <div className="d-grid my-6 mx-3">
+                <Button className="text-white fw-bold" variant="secondary" type="submit">
+                Log In
+                </Button>
+              </div>
+
+            </Form>
+
+          </Col>
+
+        </Row>
+
+      </Container>
+    </main>
 
 
-        </Layout>
-    );
+
+
+
+
+   )
 }
